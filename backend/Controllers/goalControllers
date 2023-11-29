@@ -1,0 +1,22 @@
+const getGoals = (req, res) => {
+  res.send({ message: "GET Goals" });
+};
+
+const setGoal = (req, res) => {
+  res.status(201).send({ message: "new Goal set" });
+};
+
+const updateGoal = (req, res) =>{
+  res.status(200).send({message:`Goal ${req.params.id} successfully updated`})
+};
+
+const deleteGoal = (req, res) =>{
+  res.status(200).send({message : `Goal ${req.params.id} successfully deleted` })
+}
+
+module.exports = {
+  getGoals,
+  setGoal,
+  updateGoal,
+  deleteGoal
+}
